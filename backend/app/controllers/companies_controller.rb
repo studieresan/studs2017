@@ -15,6 +15,11 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def show
+    @company = Company.find(params[:id])
+    render json: @company
+  end
+
   def update
     if @company.update(company_params)
       render :show, status: :ok, location: @company

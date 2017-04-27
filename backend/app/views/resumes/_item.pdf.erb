@@ -1,0 +1,17 @@
+<div class="item">
+  <div class="meta">
+    <div class="when"><%= item['when'] -%></div>
+    <div class="where">
+      <div class="title"><%= item['title'] -%></div>
+      <% if item['organization'].present? -%>
+        <div class="organization">
+          <%= item['organization'] -%>
+          <% if item['city'].present? -%>
+            - <%= item['city'] -%>
+          <% end -%>
+        </div>
+      <% end -%>
+    </div>
+  </div>
+  <div className="description"><%= item['description'] -%></div>
+</div>

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :users do
     get '/resume', to: 'resumes#show'
     patch '/resume', to: 'resumes#update'
+    get '/resume-download', to: 'resumes#download'
   end
 
   

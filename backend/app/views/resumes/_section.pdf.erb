@@ -1,0 +1,6 @@
+<div class="section">
+  <h2><%= section['title'] %></h2>
+  <% section['items'].each do |item| %>
+    <%= render 'resumes/item', item: item %>
+  <% end %>
+</div>
